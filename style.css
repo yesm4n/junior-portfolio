@@ -1,0 +1,657 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: hsl(205, 41%, 21%);
+  --primary-hover: hsl(167, 36%, 54%);
+  --primary-disabled: hsl(240, 2%, 92%);
+
+  --secondary: hsl(0, 0%, 98%);
+  --secondary-hover: hsl(245, 10%, 22%);
+  --secondary-disabled: hsl(240, 2%, 92%);
+
+  --error: hsl(0, 90%, 57%);
+}
+
+body {
+  margin: 0;
+  font-family: 'Public Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: 'Ibarra Real Nova', serif;
+}
+
+h1 {
+  line-height: 1;
+  font-weight: bold;
+  font-size: 50px;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+button {
+  font-size: 13px;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  color: var(--secondary-hover);
+}
+
+/* Reusable styling */
+
+.container {
+  width: 1100px;
+  max-width: 85%;
+  margin: 30px auto;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.white-button-style {
+  background-color: white;
+  border: 1px solid var(--secondary-hover);
+}
+
+.white-button-style:hover {
+  background-color: var(--secondary-hover);
+  color: var(--secondary-disabled);
+}
+
+/* Navbar */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.list-styles {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.list-styles li a {
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-size: 12px;
+}
+
+.list-styles li a:hover {
+  color: var(--primary-hover);
+}
+
+.toggle-button {
+  cursor: pointer;
+}
+
+/* Intro section */
+
+.intro-content {
+  margin: 50px 0 100px 0;
+  position: relative;
+}
+
+.intro-heading {
+  background: white;
+  padding: 3.8rem 3rem 6rem 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.intro-img {
+  background-image: url('images/images-content/homepage-desktop.jpg');
+  background-position: center;
+  min-height: 600px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.intro-about {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* Intro section components */
+
+.intro-button {
+  background-color: var(--primary);
+  color: var(--secondary-disabled);
+  border: none;
+}
+
+.intro-svg {
+  margin-right: 40px;
+}
+
+.intro-button:hover {
+  background: var(--primary-hover);
+}
+
+.intro-button:hover svg path {
+  stroke: var(--secondary-disabled);
+}
+
+/* CSS animate transition */
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+/* Main section content */
+
+.hero {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-img {
+  background-image: url('images/images-content/yllivivid.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 600px;
+  background-size: contain;
+}
+
+.hero-content {
+  border-top: 1px solid var(--secondary-disabled);
+  border-bottom: 1px solid var(--secondary-disabled);
+  width: 65%;
+  margin: auto;
+  line-height: 2;
+  color: var(--secondary-hover);
+}
+
+.hero-content button {
+  margin-bottom: 50px;
+}
+
+/* Outro section content */
+
+.outro {
+  margin-top: 150px;
+}
+
+.outro-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.outro-line {
+  border-bottom: 1px solid var(--secondary-disabled);
+  width: 50%;
+}
+
+/* Footer navbar */
+
+.footer {
+  margin-top: 100px;
+  background-color: var(--secondary-hover);
+}
+
+.footer-nav {
+  padding: 1rem 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 85%;
+  margin: auto;
+}
+
+.footer-styles {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-nav li a {
+  color: var(--secondary-disabled);
+}
+
+.footer-nav li a:hover {
+  color: var(--primary-hover);
+}
+
+.socials {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.socials svg {
+  margin-left: 10px;
+}
+
+/* 
+
+Portfoli.html
+
+*/
+
+.shuffle {
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.shuffle-content {
+  border-top: 1px solid var(--secondary-disabled);
+  border-bottom: 1px solid var(--secondary-disabled);
+  width: 65%;
+  margin: auto;
+  line-height: 2;
+  color: var(--secondary-hover);
+}
+
+.shuffle-content button {
+  margin-bottom: 50px;
+}
+
+.shuffle-img {
+  background-position: center;
+  min-height: 500px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  filter: drop-shadow(0 0 0.75rem var(--secondary-disabled));
+}
+
+.todo-img {
+  background-image: url('images/images-content/todo.png');
+}
+
+.bookmark-img {
+  background-image: url('images/images-content/bookmark.png');
+}
+
+.e-commerce-img {
+  background-image: url('images/images-content/ecommerce.png');
+}
+
+.room-layout-img {
+  background-image: url('images/images-content/layout.png');
+}
+
+/* 
+
+Contact.html
+
+*/
+
+.exp {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.contact-div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 100px;
+  border-top: 1px solid var(--secondary-disabled);
+  padding-top: 50px;
+}
+
+.contact-content {
+  line-height: 2;
+}
+
+.contact-form form {
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.input-style {
+  border: none;
+  padding: 1rem;
+  background-color: var(--secondary-disabled);
+  font-family: 'Public Sans', sans-serif;
+  outline: none;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--secondary-disabled) inset !important;
+}
+
+.contact-form form textarea {
+  resize: none;
+  margin-bottom: 20px;
+}
+
+#form-button {
+  max-width: 200px;
+}
+
+/* Hidden elements */
+
+.toggle-button {
+  display: none;
+}
+
+.input-style.ok {
+  border: 1px solid var(--primary-hover);
+}
+
+.input-style.error {
+  border: 1px solid var(--error);
+}
+
+/* 
+
+MEDIA QUERIES
+
+*/
+
+@media (prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+@media (width < 900px) {
+  /* Section intro style */
+
+  h1 {
+    font-size: 40px;
+    width: 70%;
+  }
+
+  h2 {
+    margin-top: 10px;
+    font-size: 35px;
+    width: 100%;
+  }
+
+  /* Intro section style */
+
+  .intro-img {
+    background-image: url('images/images-content/homepage-tablet.jpg');
+  }
+
+  /* Main hero style */
+
+  .hero {
+    gap: 1rem;
+    padding-top: 0;
+  }
+
+  .hero-content {
+    width: 95%;
+  }
+
+  .hero-img {
+    background-image: url('images/images-content/yllivivid.jpg');
+    background-size: contain;
+    background-position: top left;
+  }
+
+  /* Outro section style */
+
+  .outro-content {
+    justify-content: space-around;
+  }
+
+  .outro-line {
+    width: 30%;
+  }
+
+  /* Portoflio.html */
+
+  .shuffle {
+    gap: 1rem;
+    padding-top: 0;
+  }
+
+  .shuffle-content {
+    width: 95%;
+  }
+
+  .todo-img {
+    background-image: url('images/images-content/todo.png');
+    min-height: 450px;
+  }
+
+  .bookmark-img {
+    background-image: url('images/images-content/bookmark.png');
+    min-height: 450px;
+  }
+
+  .e-commerce-img {
+    background-image: url('images/images-content/ecommerce.png');
+    min-height: 450px;
+  }
+
+  .room-layout-img {
+    background-image: url('images/images-content/layout.png');
+    min-height: 450px;
+  }
+}
+
+@media (width < 600px) {
+  h1 {
+    width: 100%;
+    margin: 10px 0 20px;
+  }
+
+  /* Navbar */
+
+  .list-styles {
+    display: none;
+  }
+
+  .toggle-button {
+    display: initial;
+  }
+
+  .list-styles.active {
+    padding: 50px 0;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 85px;
+    width: 70%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--secondary-hover);
+  }
+
+  .list-styles li a.active {
+    color: var(--primary-disabled);
+  }
+
+  .list-styles li a.active:hover {
+    color: var(--primary-hover);
+  }
+
+  /* Intro section style */
+
+  .intro-content {
+    margin-bottom: 80px;
+  }
+
+  .intro-img {
+    background-image: url('images/images-content/homepage-mobile.jpg');
+    min-height: initial;
+    padding-top: 250px;
+  }
+
+  .intro-heading {
+    position: unset;
+    padding: 1rem 0;
+  }
+
+  .intro-about {
+    position: unset;
+  }
+
+  /* Main hero style */
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-img {
+    padding-top: 400px;
+    height: initial;
+    background-image: url('images/images-content/yllivivid.jpg');
+    background-position: center;
+    min-height: initial;
+  }
+
+  .hero-content button {
+    margin-bottom: 20px;
+  }
+
+  /* Outro section */
+
+  .outro {
+    margin-top: 100px;
+  }
+
+  .outro-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .outro-line {
+    display: none;
+  }
+
+  /* Footer section */
+
+  .footer {
+    text-align: center;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+
+  .footer-styles {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .socials {
+    margin: auto;
+  }
+
+  /* Portoflio.html */
+
+  .shuffle {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .shuffle-content {
+    order: 1;
+    gap: 2rem;
+  }
+
+  .shuffle-content button {
+    margin-bottom: 20px;
+  }
+
+  .todo-img {
+    margin-top: 50px;
+    background-image: url('images/images-content/todo.png');
+    min-height: 300px;
+  }
+
+  .bookmark-img {
+    background-image: url('images/images-content/bookmark.png');
+    min-height: 300px;
+  }
+
+  .e-commerce-img {
+    background-image: url('images/images-content/ecommerce.png');
+    min-height: 300px;
+  }
+
+  .room-layout-img {
+    background-image: url('images/images-content/layout.png');
+    min-height: 300px;
+  }
+
+  /* Contact section */
+
+  .contact-div {
+    grid-template-columns: 1fr;
+    margin-top: 30px;
+    padding-top: 0;
+  }
+
+  .contact-form {
+    padding-top: 30px;
+  }
+}
