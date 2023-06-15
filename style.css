@@ -30,6 +30,7 @@ h2,
 h3 {
   margin: 0;
   font-family: 'Ibarra Real Nova', serif;
+  color: var(--primary);
 }
 
 h1 {
@@ -64,6 +65,7 @@ li {
 
 button {
   font-size: 13px;
+  color: var(--secondary-hover);
 }
 
 a {
