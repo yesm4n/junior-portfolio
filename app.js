@@ -46,7 +46,11 @@ const roomLayout = document.querySelectorAll('.room-layout');
 // Scrolling to about me
 if (introButton !== null) {
   introButton.addEventListener('click', () => {
-    scrollTo(0, 800);
+    if (window.innerWidth >= 600) {
+      scrollTo(0, 800);
+    } else {
+      scrollTo(0, 500);
+    }
   });
 }
 
