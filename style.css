@@ -18,18 +18,19 @@
 
 body {
   margin: 0;
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5%;
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-family: 'Ibarra Real Nova', serif;
+  font-family: "Ibarra Real Nova", serif;
   color: var(--primary);
 }
 
@@ -151,7 +152,7 @@ p {
 }
 
 .intro-img {
-  background-image: url('images/images-content/homepage-desktop.jpg');
+  background-image: url("images/images-content/homepage-desktop.jpg");
   background-position: center;
   min-height: 600px;
   background-repeat: no-repeat;
@@ -208,7 +209,7 @@ p {
 }
 
 .hero-img {
-  background-image: url('images/images-content/yllivivid.jpg');
+  background-image: url("images/images-content/yllivivid.jpg");
   background-repeat: no-repeat;
   background-position: center;
   min-height: 600px;
@@ -320,19 +321,19 @@ Portfoli.html
 }
 
 .todo-img {
-  background-image: url('images/images-content/todo.png');
+  background-image: url("images/images-content/todo.png");
 }
 
 .bookmark-img {
-  background-image: url('images/images-content/bookmark.png');
+  background-image: url("images/images-content/bookmark.png");
 }
 
 .e-commerce-img {
-  background-image: url('images/images-content/ecommerce.png');
+  background-image: url("images/images-content/ecommerce.png");
 }
 
 .room-layout-img {
-  background-image: url('images/images-content/layout.png');
+  background-image: url("images/images-content/layout.png");
 }
 
 /* 
@@ -370,7 +371,7 @@ Contact.html
   border: none;
   padding: 1rem;
   background-color: var(--secondary-disabled);
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   outline: none;
 }
 
@@ -433,7 +434,7 @@ MEDIA QUERIES
   /* Intro section style */
 
   .intro-img {
-    background-image: url('images/images-content/homepage-tablet.jpg');
+    background-image: url("images/images-content/homepage-tablet.jpg");
   }
 
   /* Main hero style */
@@ -448,7 +449,7 @@ MEDIA QUERIES
   }
 
   .hero-img {
-    background-image: url('images/images-content/yllivivid.jpg');
+    background-image: url("images/images-content/yllivivid.jpg");
     background-size: contain;
     background-position: top left;
   }
@@ -475,22 +476,22 @@ MEDIA QUERIES
   }
 
   .todo-img {
-    background-image: url('images/images-content/todo.png');
+    background-image: url("images/images-content/todo.png");
     min-height: 450px;
   }
 
   .bookmark-img {
-    background-image: url('images/images-content/bookmark.png');
+    background-image: url("images/images-content/bookmark.png");
     min-height: 450px;
   }
 
   .e-commerce-img {
-    background-image: url('images/images-content/ecommerce.png');
+    background-image: url("images/images-content/ecommerce.png");
     min-height: 450px;
   }
 
   .room-layout-img {
-    background-image: url('images/images-content/layout.png');
+    background-image: url("images/images-content/layout.png");
     min-height: 450px;
   }
 }
@@ -539,7 +540,7 @@ MEDIA QUERIES
   }
 
   .intro-img {
-    background-image: url('images/images-content/homepage-mobile.jpg');
+    background-image: url("images/images-content/homepage-mobile.jpg");
     min-height: initial;
     padding-top: 250px;
   }
@@ -562,7 +563,7 @@ MEDIA QUERIES
   .hero-img {
     padding-top: 400px;
     height: initial;
-    background-image: url('images/images-content/yllivivid.jpg');
+    background-image: url("images/images-content/yllivivid.jpg");
     background-position: center;
     min-height: initial;
   }
@@ -626,22 +627,22 @@ MEDIA QUERIES
 
   .todo-img {
     margin-top: 50px;
-    background-image: url('images/images-content/todo.png');
+    background-image: url("images/images-content/todo.png");
     min-height: 300px;
   }
 
   .bookmark-img {
-    background-image: url('images/images-content/bookmark.png');
+    background-image: url("images/images-content/bookmark.png");
     min-height: 300px;
   }
 
   .e-commerce-img {
-    background-image: url('images/images-content/ecommerce.png');
+    background-image: url("images/images-content/ecommerce.png");
     min-height: 300px;
   }
 
   .room-layout-img {
-    background-image: url('images/images-content/layout.png');
+    background-image: url("images/images-content/layout.png");
     min-height: 300px;
   }
 
