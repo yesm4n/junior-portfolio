@@ -1,12 +1,29 @@
 'use strict';
 
-// Global variables
+// VARIABLES
+
+// NAVBAR
 const toggleButton = document.querySelector('.toggle-button');
 const listStyles = document.querySelector('.list-styles');
 const listItem = document.querySelectorAll('.list-styles li a');
 const openMenu = document.querySelector('.open');
+// BUTTONS
+const logo = document.querySelectorAll('.logo');
+const introButton = document.querySelector('.intro-button');
+const contactButton = document.querySelectorAll('.contact');
+const portfolioButton = document.querySelectorAll('.portfolio');
+// PROJECTS
+const todo = document.querySelectorAll('.todo');
+const bookmarkProject = document.querySelectorAll('.bookmark');
+const eCommerce = document.querySelectorAll('.e-commerce');
+const roomLayout = document.querySelectorAll('.room-layout');
+// FORM AND INPUT
+const myForm = document.getElementById('myForm');
+const nameInput = document.getElementById('myName');
+const emailInput = document.getElementById('myEmail');
+const textAreaInput = document.getElementById('myTextarea');
 
-// Hamburger toggle
+// Hamburger menu toggle
 toggleButton.addEventListener('click', () => {
   listStyles.classList.toggle('active');
   listItem.forEach(item => {
@@ -33,24 +50,13 @@ const observer = new IntersectionObserver(entries => {
 const hidden = document.querySelectorAll('.hidden');
 hidden.forEach(el => observer.observe(el));
 
-// Buttons interaction
-const logo = document.querySelectorAll('.logo');
-const introButton = document.querySelector('.intro-button');
-const contactButton = document.querySelectorAll('.contact');
-const portfolioButton = document.querySelectorAll('.portfolio');
-const todo = document.querySelectorAll('.todo');
-const bookmarkProject = document.querySelectorAll('.bookmark');
-const eCommerce = document.querySelectorAll('.e-commerce');
-const roomLayout = document.querySelectorAll('.room-layout');
-
 // Scrolling to about me
+const sectionAboutMe = document.querySelector('.hero-content');
+
 if (introButton !== null) {
-  introButton.addEventListener('click', () => {
-    if (window.innerWidth >= 600) {
-      scrollTo(0, 800);
-    } else {
-      scrollTo(0, 500);
-    }
+  introButton.addEventListener('click', e => {
+    const locateSection = sectionAboutMe.getBoundingClientRect();
+    sectionAboutMe.scrollIntoView();
   });
 }
 
@@ -73,6 +79,7 @@ portfolioButton.forEach(button => {
   });
 });
 
+// Redirecting to certain projects
 todo.forEach(list => {
   list.addEventListener('click', () => {
     window.location.href = 'https://yesm4n.github.io/to-do-list/';
@@ -96,12 +103,6 @@ roomLayout.forEach(room => {
     window.location.href = 'https://yesm4n.github.io/room-layout/';
   });
 });
-
-// Form and input variables
-const myForm = document.getElementById('myForm');
-const nameInput = document.getElementById('myName');
-const emailInput = document.getElementById('myEmail');
-const textAreaInput = document.getElementById('myTextarea');
 
 // Validation form
 const formValidation = () => {
