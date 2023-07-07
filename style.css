@@ -476,22 +476,18 @@ MEDIA QUERIES
   }
 
   .todo-img {
-    background-image: url("images/images-content/todo.png");
     min-height: 450px;
   }
 
   .bookmark-img {
-    background-image: url("images/images-content/bookmark.png");
     min-height: 450px;
   }
 
   .e-commerce-img {
-    background-image: url("images/images-content/ecommerce.png");
     min-height: 450px;
   }
 
   .room-layout-img {
-    background-image: url("images/images-content/layout.png");
     min-height: 450px;
   }
 }
@@ -627,22 +623,18 @@ MEDIA QUERIES
 
   .todo-img {
     margin-top: 50px;
-    background-image: url("images/images-content/todo.png");
     min-height: 300px;
   }
 
   .bookmark-img {
-    background-image: url("images/images-content/bookmark.png");
     min-height: 300px;
   }
 
   .e-commerce-img {
-    background-image: url("images/images-content/ecommerce.png");
     min-height: 300px;
   }
 
   .room-layout-img {
-    background-image: url("images/images-content/layout.png");
     min-height: 300px;
   }
 
