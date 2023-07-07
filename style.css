@@ -441,7 +441,6 @@ MEDIA QUERIES
 
   .hero {
     gap: 1rem;
-    padding-top: 0;
   }
 
   .hero-content {
@@ -473,22 +472,6 @@ MEDIA QUERIES
 
   .shuffle-content {
     width: 95%;
-  }
-
-  .todo-img {
-    min-height: 450px;
-  }
-
-  .bookmark-img {
-    min-height: 450px;
-  }
-
-  .e-commerce-img {
-    min-height: 450px;
-  }
-
-  .room-layout-img {
-    min-height: 450px;
   }
 }
 
@@ -529,6 +512,12 @@ MEDIA QUERIES
     color: var(--primary-hover);
   }
 
+  /* Container */
+
+  .container {
+    width: 70%;
+  }
+
   /* Intro section style */
 
   .intro-content {
@@ -553,15 +542,17 @@ MEDIA QUERIES
   /* Main hero style */
 
   .hero {
+    padding-top: 0;
+    gap: 2rem;
     grid-template-columns: 1fr;
   }
 
   .hero-img {
-    padding-top: 400px;
     height: initial;
+    min-height: initial;
+    padding-top: 400px;
     background-image: url("images/images-content/yllivivid.jpg");
     background-position: center;
-    min-height: initial;
   }
 
   .hero-content button {
@@ -607,14 +598,18 @@ MEDIA QUERIES
   /* Portoflio.html */
 
   .shuffle {
+    gap: 2rem;
     grid-template-columns: 1fr;
-    margin-top: 20px;
-    padding-bottom: 50px;
+    margin: 20px auto;
+  }
+
+  .shuffle-img {
+    min-height: 300px;
+    background-position: top;
   }
 
   .shuffle-content {
     order: 1;
-    gap: 2rem;
   }
 
   .shuffle-content button {
@@ -623,19 +618,6 @@ MEDIA QUERIES
 
   .todo-img {
     margin-top: 50px;
-    min-height: 300px;
-  }
-
-  .bookmark-img {
-    min-height: 300px;
-  }
-
-  .e-commerce-img {
-    min-height: 300px;
-  }
-
-  .room-layout-img {
-    min-height: 300px;
   }
 
   /* Contact section */
