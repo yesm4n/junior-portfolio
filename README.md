@@ -1,4 +1,4 @@
-# junior-portfolio
+# My junior portfolio
 
 Welcome to my portfolio website! I'm thrilled to present my journey as a frontend web developer over the past five months. This project is a culmination of my passion for coding, continuous learning, and creative problem-solving.
 
