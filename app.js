@@ -17,12 +17,6 @@ const todo = document.querySelectorAll('.todo');
 const bookmarkProject = document.querySelectorAll('.bookmark');
 const eCommerce = document.querySelectorAll('.e-commerce');
 const roomLayout = document.querySelectorAll('.room-layout');
-// FORM AND INPUT
-const myForm = document.getElementById('myForm');
-const nameInput = document.getElementById('myName');
-const emailInput = document.getElementById('myEmail');
-const textAreaInput = document.getElementById('myTextarea');
-const formButton = document.getElementById('form-button');
 
 // Hamburger menu toggle
 toggleButton.addEventListener('click', () => {
@@ -104,13 +98,58 @@ roomLayout.forEach(room => {
   });
 });
 
-// BUG
+// Form validation
 
-// Need a new form validation
+const form = document.getElementById('form');
+const yourName = document.getElementById('name');
+const yourEmail = document.getElementById('email');
+const yourMessage = document.getElementById('message');
 
-if (formButton !== null) {
-  formButton.addEventListener('click', e => {
+const formValidation = () => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  switch (true) {
+    case yourName.value.trim() === '':
+      alert('Name must be filled');
+      yourName.style.border = '1px solid var(--error)';
+      break;
+    case yourEmail.value.trim() === '':
+      alert('Email must be filled');
+      yourEmail.style.border = '1px solid var(--error)';
+      break;
+    case !emailRegex.test(yourEmail.value):
+      alert('Invalid email format');
+      yourEmail.style.border = '1px solid var(--error)';
+      break;
+    case yourMessage.value.trim() === '':
+      alert('Message cannot be empty');
+      yourMessage.style.border = '1px solid var(--error)';
+      break;
+    default:
+      yourName.style.border =
+        '1px solid var(--primary-hover, hsl(167, 36%, 54%))';
+      yourEmail.style.border =
+        '1px solid var(--primary-hover, hsl(167, 36%, 54%))';
+      yourMessage.style.border =
+        '1px solid var(--primary-hover, hsl(167, 36%, 54%))';
+      window.open(
+        `mailto:mrylliramadani@gmail.com?subject=${yourName.value}&body=${yourMessage.value}`
+      );
+      form.reset();
+      break;
+  }
+
+  setTimeout(() => {
+    yourName.style.border = '';
+    yourEmail.style.border = '';
+    yourMessage.style.border = '';
+  }, 3000);
+};
+
+// Preventing error when not in the correct page
+if (form !== null) {
+  form.addEventListener('submit', e => {
     e.preventDefault();
-    alert('Under construction');
+    formValidation();
   });
 }

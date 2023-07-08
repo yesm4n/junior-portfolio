@@ -77,15 +77,15 @@
             <div class="contact-div">
                 <h2 id="#contact-me">Contact Me</h2>
                 <div class="contact-form">
-                    <form id="myForm" autocomplete="off">
-                        <label for="myName">Name</label>
-                        <input class="input-style" type="text" id="myName" placeholder="Jane Appleseed">
-                        <label for="myEmail">Email Address</label>
-                        <input class="input-style" type="text" id="myEmail" placeholder="email@example.com">
-                        <label for="myTextarea">Message</label>
-                        <textarea class="input-style" id="myTextarea" cols="30" rows="5"
+                    <form action="/" method="GET" id="form" autocomplete="off">
+                        <label for="name">Name</label>
+                        <input class="input-style" type="text" id="name" placeholder="Jane Appleseed">
+                        <label for="email">Email Address</label>
+                        <input class="input-style" type="email" id="email" placeholder="email@example.com">
+                        <label for="message">Message</label>
+                        <textarea class="input-style" id="message" cols="30" rows="5"
                             placeholder="How can I help?"></textarea>
-                        <button id="form-button" class="btn white-button-style">Send Message</button>
+                        <button type="submit" id="form-button" class="btn white-button-style">Send Message</button>
                     </form>
                 </div>
             </div>
